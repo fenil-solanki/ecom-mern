@@ -45,6 +45,11 @@ app.use(bodyParser.json());
 
 /** Routes */
 const controller=require("./source/controllers/posts.js")
+let UserObj = require("./source/models/User.js")
+let CartObj = require("./source/models/Cart.js")
+let ProductObj=require("./source/models/Product.js")
+let ImageModel=require("./source/models/Image.js")
+
 
 
 app.use(cors({
