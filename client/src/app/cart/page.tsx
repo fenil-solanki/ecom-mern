@@ -57,6 +57,7 @@ const Page = () => {
               <div className='container mx-auto py-11'>
                 <div className='flex'>
                 <div className='basis-1/2'>
+                    <div className="hidden">
                   <p className='font-semibold'>Discount Codes</p>
                   <p>Enter your coupon code if you have one</p>
                   <div>
@@ -65,6 +66,7 @@ const Page = () => {
                   </div>
                   <button className='py-3 px-12 rounded-md border border-[#BEBCBD] decoration-[#3C4242] bg-[#fff]'><Link href="/products">Continue Shopping</Link></button>
                 </div>
+                    </div>
                 <div className='basis-1/2'>
                   <div className=''>
                     <div>
