@@ -76,13 +76,14 @@ app.post('/upload',async(req,res)=>{
     
 })
 app.get('/images/:imgname',async(req,res)=>{
-        const ImageObj = await ImageModel.findOne({ imgName: req.params.imgname });
-        console.log(ImageObj)
-        const imgdata = ImageObj.imgData.split(",")[1]; // Extract the base64 data part
-        const imageBuffer = Buffer.from(imgdata, "base64");
+        // const ImageObj = await ImageModel.findOne({ imgName: req.params.imgname });
+        // console.log(ImageObj)
+        // const imgdata = ImageObj.imgData.split(",")[1]; // Extract the base64 data part
+        // const imageBuffer = Buffer.from(imgdata, "base64");
       
-        res.setHeader("Content-Type", "image/png");
-        res.end(imageBuffer);
+        // res.setHeader("Content-Type", "image/png");
+        // res.end(imageBuffer);
+    res.send("hello")
 })
 
 // app.put('/updatecart',controller.updateCart)
