@@ -29,11 +29,6 @@ app.use(express.urlencoded({limit:"10mb",extended:true,parameterLimit:50000}))
 // app.set('views', __dirname + '/views')
 app.use(bodyParser.json());
 
-app.use(cors({
-    origin:["*"],
-    methods:["GET","POST"],
-    optionsSuccessStatus:200
-}))
 /** RULES OF OUR API */
 // app.use((req, res, next):any => {
 //     // set the CORS policy
@@ -50,6 +45,14 @@ app.use(cors({
 
 /** Routes */
 const controller=require("./source/controllers/posts.js")
+
+
+app.use(cors({
+    origin:["*"],
+    methods:["GET","POST"],
+    optionsSuccessStatus:200
+}))
+
 app.get('/', controller.home);
 app.get('/finduser', controller.finduser);
 app.get('/finduseremail', controller.finduserByemail);
