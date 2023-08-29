@@ -18,4 +18,5 @@ const ImageSchema=new mongooseObj4.Schema({
 })
 
 const ImageModel=new mongooseObj4.model('images',ImageSchema);
+module.exports=ImageModel;
 
