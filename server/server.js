@@ -57,7 +57,9 @@ app.use(cors({
     methods:["GET","POST"]
 }))
 
-app.get('/', controller.home);
+app.get('/',(req,res)=>{
+    res.send("hello world")
+});
 app.get('/finduser', controller.finduser);
 app.get('/finduseremail', controller.finduserByemail);
 
