@@ -62,7 +62,7 @@ const Page = () => {
                 password
             }
             console.log("User data from fornt end : ",userdata)
-            const res = await axios.get("http://localhost:5000/finduser", {params: userdata})
+            const res = await axios.get("https://ecom-mern-server.vercel.app/finduser", {params: userdata})
             const userData=await res.data;
             console.log(userData)
 
