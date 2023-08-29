@@ -1,7 +1,7 @@
 //"use client"
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
-const page = () => {
+const Page = () => {
 
   const [productDetail, setProductDetail] = useState<any>(
     {
@@ -269,4 +269,4 @@ return (
 )
 }
 
-export default page
+export default Page
