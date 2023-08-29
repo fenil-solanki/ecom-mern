@@ -27,10 +27,10 @@ const Page = () => {
 
   const [isUpload, setisUpload] = useState(false)
 
-  const serverpath = "http://localhost:5000/images/"
+  const serverpath = "https://ecom-mern-server.vercel.app/images/"
 
   function get_user_image_url(arr:any,data64: any) {
-    fetch("http://localhost:5000/upload", {
+    fetch("https://ecom-mern-server.vercel.app/upload", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -89,7 +89,7 @@ const handleUpload = async (e: any) => {
 
   e.preventDefault()
   try {
-    const res = await axios.post("http://localhost:5000/postproduct", productDetail)
+    const res = await axios.post("https://ecom-mern-server.vercel.app/postproduct", productDetail)
     const data = await res.data
     console.log(res)
     console.log(data)
