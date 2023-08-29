@@ -48,9 +48,8 @@ const controller=require("./source/controllers/posts.js")
 
 
 app.use(cors({
-    origin:["*"],
-    methods:["GET","POST"],
-    optionsSuccessStatus:200
+    origin:["https://ecom-mern-client.vercel.app"],
+    methods:["GET","POST"]
 }))
 
 app.get('/', controller.home);
