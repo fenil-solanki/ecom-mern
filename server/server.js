@@ -16,7 +16,11 @@ app.use(express.urlencoded({ extended: false }));
 /** Takes care of JSON data */
 app.use(express.json({limit:"10mb"}));
 
-app.use(cors({origin:["https://ecom-mern-client.vercel.app/"],methods:["GET","POST"]}))
+app.use(cors({
+    origin:["https://ecom-mern-client.vercel.app/"],
+    methods:["GET","POST"],
+    optionsSuccessStatus:200,
+}))
 var bodyParser = require('body-parser');
 
 // configure the app to use bodyParser()
