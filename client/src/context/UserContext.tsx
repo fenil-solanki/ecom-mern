@@ -39,7 +39,7 @@ const UserProvider=({children}:any)=>{
 
             handleLogin(userData)
         }catch(e){
-            alert("Sorry, something went wrong.")
+            console.log("Sorry, something went wrong.")
         }
     }
 
