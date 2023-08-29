@@ -14,16 +14,11 @@ app.use(morgan('dev'));
 /** Parse the request */
 app.use(express.urlencoded({ extended: false }));
 /** Takes care of JSON data */
-app.use(express.json({limit:"10mb"}));
 
 
 var bodyParser = require('body-parser');
 
 // configure the app to use bodyParser()
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-app.use(express.urlencoded({limit:"10mb",extended:true,parameterLimit:50000}))
 
 // app.set("view engine","ejs")
 // app.set('views', __dirname + '/views')
@@ -50,7 +45,12 @@ let CartObj = require("./source/models/Cart.js")
 let ProductObj=require("./source/models/Product.js")
 let ImageModel=require("./source/models/Image.js")
 
-
+app.use(express.json({limit:"10mb"}));
+app.use(bodyParser.urlencoded({
+    extended: true,
+    limit:"10mb"
+}));
+app.use(express.urlencoded({limit:"10mb",extended:true,parameterLimit:50000}))
 
 app.use(cors({
     origin:["https://ecom-mern-client.vercel.app"],
