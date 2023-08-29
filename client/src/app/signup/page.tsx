@@ -82,7 +82,7 @@ const Page = () => {
       try{
         const userData={name,email,password}
         console.log(userData)
-        const res:any = await axios.post("http://localhost:5000/adduser", userData)
+        const res:any = await axios.post("https://ecom-mern-server.vercel.app/adduser", userData)
         const data=await res.data
         console.log(res)
         console.log(data)
