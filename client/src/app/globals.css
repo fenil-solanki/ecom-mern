@@ -134,13 +134,22 @@ nav ul ul li a:hover {
 }
 
 table tr th{
-	padding: 16px 0px;
+	padding: 10px 0px;
 	text-align: center;
 }
 
 table tr td{
 	padding: 50px 0px;
 }
+
+@media only screen and (min-width: 1024px) {
+	/* For desktop: */
+	table tr th{
+		padding: 16px 0px;
+		text-align: center;
+	}
+  }
+
 
 /* .circle {
 	float: right;
