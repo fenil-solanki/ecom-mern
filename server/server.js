@@ -57,7 +57,8 @@ app.use(cors({
     methods:["GET","POST"]
 }))
 
-app.get('https://ipapi.co/currency/', function(resp){
+app.get('userip', (req,res)=>{
+https.get('https://ipapi.co/currency/', function(resp){
     var body = ''
     resp.on('data', function(data){
         body += data;
@@ -65,6 +66,8 @@ app.get('https://ipapi.co/currency/', function(resp){
     resp.on('end', function(){
         console.log(body);
     });
+});
+}
 }
           
 app.get('/finduser', controller.finduser);
