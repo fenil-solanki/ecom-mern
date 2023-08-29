@@ -67,8 +67,7 @@ https.get('https://ipapi.co/currency/', function(resp){
         console.log(body);
     });
 });
-}
-}
+})
           
 app.get('/finduser', controller.finduser);
 app.get('/finduseremail', controller.finduserByemail);
