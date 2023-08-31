@@ -90,7 +90,8 @@ const handleUpload = async (e: any) => {
   e.preventDefault()
 
   console.log(Date.now().toString())
-  setProductDetail({...productDetail,id: Date.now().toString()})
+  const dateData=Date.now().toString();
+  setProductDetail({...productDetail,id: dateData})
   
   try {
     const res = await axios.post("https://ecom-mern-server.vercel.app/postproduct", productDetail)
