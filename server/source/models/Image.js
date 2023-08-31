@@ -8,8 +8,7 @@ const ImageSchema=new mongooseObj4.Schema({
     },
     imgData:{
         type:String,
-        required:true,
-        unique:true
+        required:true
     },
     joindate:{
         type:Date,
