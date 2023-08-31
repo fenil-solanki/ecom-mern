@@ -1,3 +1,4 @@
+"use client"
 import { useFilterContext } from '@/context/FilterContext'
 import React from 'react'
 import {MdOutlineArrowForwardIos} from 'react-icons/md'
