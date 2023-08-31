@@ -160,11 +160,11 @@ const Page = () => {
             </div>
     
               <div className='w-[50%] grid grid-cols-2 gap-2'>
-                <button className='font-semibold bg-[#8A33FD] py-3 px-7 rounded-md' style={{color:"fff"}} onClick={handleCart}>
+                <button className='font-semibold bg-[#8A33FD] py-3 rounded-md' style={{color:"fff"}} onClick={handleCart}>
                   <PiShoppingCartSimpleBold className='inline mr-2' style={{color:"fff"}} size={24}></PiShoppingCartSimpleBold>
                  <span style={{color:"white"}}>Add to cart</span>
                   </button>
-                <button className='font-bold  py-2 text-lg border border-[#3C4242] rounded-md'>$63.00</button>
+                <button className='font-bold  py-2 text-lg border border-[#3C4242] rounded-md'>{singleProduct.discount_price!==0 ? singleProduct.disocunt_price:singleProduct.actual_price}</button>
               </div>
     
               <hr className='border border-[#BEBCBD] my-12'/>
