@@ -9,7 +9,7 @@ import { useFilterContext } from '@/context/FilterContext'
 import DressTypes from '../component/DressTypes'
 import Companies from '../component/Companies'
 // import Products from '../component/Products'
-const Page = () => {
+const page = () => {
   const {apiloading}=useAppContext()
   const {products,filterProducts,updateFilterValue,uniqueColors,unique_types,uniqueSizes,uniqueCompanies,clearFilter,minimum_price,maximum_price,uniqueCategories,filters}=useFilterContext()
   const [color, setcolor] = useState<any>([])
@@ -36,11 +36,11 @@ const routeParams = useParams();
 
       <div className='flex flex-row'>
         <div className='basis-3/12'>
-          <section className='px-5'>
+          <section className='px-2 sm:px-5'>
             <div className=''>
-              <div className='mt-8 mb-12 grid grid-cols-2'>
-              <h3 className='inline font-semibold text-2xl' style={{color:"#807D7E"}}>Filter</h3>
-              <div>
+              <div className='mt-8 mb-2 sm:mb-4 lg:mb-12 grid grid-cols-2'>
+              <h3 className='inline font-semibold text-base sm:text-lg lg:text-2xl' style={{color:"#807D7E"}}>Filter</h3>
+              <div className='text-center'>
 
               <img src="filter.png" alt="" className='inline'/>
               </div>
@@ -62,18 +62,18 @@ const routeParams = useParams();
 
 
           <div className=''>
-            <div className='mt-8 mb-5'>
-            <h3 className='inline font-semibold text-2xl' style={{color:"#807D7E"}}>Price</h3>
+            <div className='mt-4 mb-2 sm:mt-8 sm:mb-4 lg:mb-5'>
+            <h3 className='inline font-semibold text-base sm:text-lg lg:text-2xl' style={{color:"#807D7E"}}>Price</h3>
             </div>
-            <hr className='mb-8 decoration-[#BEBCBD]'/>
+            <hr className='mb-4 decoration-[#BEBCBD] md:mb-6 lg:mb-8'/>
             <div>
           <input type="range" name="price" min={minimum_price} max={maximum_price} value={filters.price} onChange={updateFilterValue}/>
-          <div className='grid grid-cols-2 gap-3 mt-6'>
+          <div className='grid grid-cols-2 gap-3 mt-4 md:mt-6'>
               <div>
-              <button className='rounded-lg border border-[#BEBCBD] px-5 py-2' style={{color:"#3C4242"}}><span>${minimum_price}</span></button>
+              <button className='rounded-lg text-[12px] border border-[#BEBCBD] px-0.5 py-1 md:px-1 md:py-2 w-full md:text-lg lg:text-xl lg:px-5' style={{color:"#3C4242"}}><span>${minimum_price}</span></button>
               </div>
               <div>
-              <button className='rounded-lg border border-[#BEBCBD] px-5 py-2' style={{color:"#3C4242"}}><span>${maximum_price}</span></button>
+              <button className='rounded-lg text-[12px] border border-[#BEBCBD] px-0.5 py-1 md:px-1 md:py-2 w-full md:text-lg lg:text-xl lg:px-5' style={{color:"#3C4242"}}><span>${maximum_price}</span></button>
               </div>
 
           </div>
@@ -82,15 +82,15 @@ const routeParams = useParams();
 
 
           <div className=''>
-            <div className='mt-8 mb-5'>
-            <h3 className='inline font-semibold text-2xl' style={{color:"#807D7E"}}>Sizes</h3>
+            <div className='mt-4 mb-2 sm:mt-8 sm:mb-4 lg:mb-5'>
+            <h3 className='inline font-semibold text-base sm:text-lg lg:text-2xl' style={{color:"#807D7E"}}>Sizes</h3>
             </div>
-            <hr className='mb-8 decoration-[#BEBCBD]'/>
-            <div className='grid grid-cols-4 px-5'>
+            <hr className='mb-4 decoration-[#BEBCBD] md:mb-6 lg:mb-8'/>
+            <div className='grid grid-cols-4 px-1 md:px-2 lg:px-5'>
               {
                 uniqueSizes.map((curSize:any)=>{
                     return(
-                       <button name="size" onClick={updateFilterValue} value={curSize} key={curSize} className='h-9 w-9 rounded rounded-lg mb-4 border-2 border-[#000]'>
+                       <button name="size" onClick={updateFilterValue} value={curSize} key={curSize} className='h-6 w-6 text-[10px] rounded rounded-lg mb-2 border border-[#000] md:text-[14px] md:h-7 md:w-7 lg:text-xl lg:border-2 lg:h-9 lg:w-9 lg:mb-4'>
                           {curSize}
                        </button>)
                 })
@@ -100,15 +100,15 @@ const routeParams = useParams();
 
 
             <div className=''>
-            <div className='mt-8 mb-5'>
-            <h3 className='inline font-semibold text-2xl' style={{color:"#807D7E"}}>Colors</h3>
+            <div className='mt-4 mb-2 sm:mt-8 sm:mb-4 lg:mb-5'>
+            <h3 className='inline font-semibold text-base sm:text-lg lg:text-2xl' style={{color:"#807D7E"}}>Colors</h3>
             </div>
-            <hr className='mb-8 decoration-[#BEBCBD]'/>
-            <div className='grid grid-cols-4 px-5'>
+            <hr className='mb-4 decoration-[#BEBCBD] md:mb-6 lg:mb-8'/>
+            <div className='grid grid-cols-4 px-1 md:px-2 lg:px-5'>
               {
                 uniqueColors.map((curColor:any)=>{
                     return(
-                       <button name="color" key={curColor} onClick={updateFilterValue} value={curColor} className='h-9 w-9 rounded rounded-lg mb-4 border-2 border-[#000]' style={{backgroundColor:curColor}}>
+                       <button name="color" key={curColor} onClick={updateFilterValue} value={curColor} className='h-6 w-6 rounded rounded-lg  mb-2 border border-[#000] md:h-7 md:w-7 lg:text-xl lg:border-2 lg:h-9 lg:w-9 lg:mb-4' style={{backgroundColor:curColor}}>
 
                        </button>)
                 })
@@ -122,9 +122,9 @@ const routeParams = useParams();
 
 
         <div className=''>
-              <div className='mt-8 mb-12 grid grid-cols-2'>
-              <h3 className='inline font-semibold text-2xl' style={{color:"#807D7E"}}>Company</h3>
-              <div>
+              <div className='mt-4 mb-2 sm:mt-8 sm:mb-4 grid grid-cols-2 lg:mb-5'>
+              <h3 className='inline font-semibold text-base sm:text-lg lg:text-2xl' style={{color:"#807D7E"}}>Company</h3>
+              <div className='text-center'>
 
               <img src="filter.png" alt="" className='inline'/>
               </div>
@@ -145,20 +145,20 @@ const routeParams = useParams();
 
 
             <div>
-              <button onClick={clearFilter} className='py-3 px-20 my-11 bg-[#8A33FD]' style={{color:"#fff"}}>Clear Filter</button>
+              <button onClick={clearFilter} className='py-2 px-4 text-xs my-6 bg-[#8A33FD] rounded-lg w-full sm:text-sm sm:py-3 sm:my-8 sm:px-6 md:text-base md:px-8 lg:w-auto lg:px-20 lg:text-xl lg:px-20 lg:my-11 lg:text-lg' style={{color:"#fff"}}>Clear Filter</button>
             </div>
 
           </section>
         </div>
         <div className='basis-9/12'>
-                <div className='flex flex-row my-8 pr-14'>
-                    <div className='basis-1/2'>
+                <div className='grid grid-cols-1 mt-8 mb-4 sm:mb-8 sm:grid-cols-2  pr-4 2xl:pr-14'>
+                    <div className=''>
                       {
                         uniqueCategories.map((curCategory:any)=>{
                           if(curCategory===selectedCategory){
-                            return  <span key={curCategory} className='inline mx-4' style={{color:"#8A33FD"}} onClick={()=>setselectedCategory(curCategory)}>{curCategory.charAt(0).toUpperCase() + curCategory.slice(1)}</span>
+                            return  <span key={curCategory} className='inline mx-0 sm:mx-4 text-base md:text-lg lg:text-xl' style={{color:"#8A33FD"}} onClick={()=>setselectedCategory(curCategory)}>{curCategory.charAt(0).toUpperCase() + curCategory.slice(1)}</span>
                           }else{
-                            return  <span key={curCategory} className='inline mx-4' onClick={()=>setselectedCategory(curCategory)}>{curCategory.charAt(0).toUpperCase() + curCategory.slice(1)}</span>
+                            return  <span key={curCategory} className='inline mx-0 sm:mx-4 text-base md:text-lg lg:text-xl' onClick={()=>setselectedCategory(curCategory)}>{curCategory.charAt(0).toUpperCase() + curCategory.slice(1)}</span>
                             
                           }
                           
@@ -167,9 +167,9 @@ const routeParams = useParams();
                    
                       {/* <span className='mx-4' onClick={(e:any)=>selectedCategory("women's category")}>Women's Clothing</span> */}
                       </div>
-                    <div className='basis-1/2 text-right'>
-                        <span className='inline mr-2' style={{color:"#8A33FD"}}>New</span>
-                        <span className='inline' style={{color:"#3F4646"}}>Recommended</span>
+                    <div className='text-left sm:text-right'>
+                        <span className='inline mr-2 text-base md:text-lg lg:text-xl' style={{color:"#8A33FD"}}>New</span>
+                        <span className='inline text-base md:text-lg lg:text-xl' style={{color:"#3F4646"}}>Recommended</span>
                     </div>
                 </div>
                 <div className='grid grid-cols-3 gap-2 pb-8 sm:px-2 lg:px-0 lg:gap-6 2xl:gap-1'>
@@ -177,18 +177,18 @@ const routeParams = useParams();
                         filterProducts && filterProducts.length && filterProducts.map((product:any)=>{
                             return(
                               <Link href={`/singleproduct/${product.id}`} key={product.id}>
-                                <div className='mx-auto my-8 md:my-4 2xl:my-8'>
-                                    <img src={product.image} className='sm:w-[169px] sm:h-[222px] md:w-[211px] md:h-[277px] lg:w-[282px] lg:h-[370px] rounded-lg' />
+                                <div className='mx-auto my-6 md:my-4 2xl:my-8'>
+                                    <img src={product.image} className='w-[118px] h-[156px] sm:w-[169px] sm:h-[222px] md:w-[211px] md:h-[277px] lg:w-[282px] lg:h-[370px] rounded-lg' />
                                     <div className='grid grid-cols-3 lg:grid-cols-2 mt-4'>
                                       <div className='col-span-2 lg:col-span-1'>
-                                      <p style={{color:"#3C4242"}} className='text-xs lg:text-sm font-medium 2xl:font-semibold 2xl:text-base'>{product.name}</p>
+                                      <p style={{color:"#3C4242"}} className='text-[8px] font-medium sm:text-xs lg:text-sm  2xl:font-semibold 2xl:text-base'>{product.name}</p>
                                       {
-                                        product.comapny!=="" && product.company.length!==0?<p style={{color:"#807D7E"}} className='text-[10px] lg:text-xs font-normal 2xl:font-medium 2xl:text-sm'>{product.company}</p>:null
+                                        product.comapny!=="" && product.company.length!==0?<p style={{color:"#807D7E"}} className='text-[8px] font-normal sm:text-[10px] lg:text-xs  2xl:font-medium 2xl:text-sm'>{product.company}</p>:null
                                       }
                                     
                                       </div>
                                       <div className='bg-[#F6F6F6] py-1 mx-auto lg:py-2'>
-                                        <p className='font-bold text-[10px] lg:text-sm' style={{color:"#3C4242"}}>${product.discount_price==0?product.actual_price:product.discount_price}</p>
+                                        <p className='font-semibold sm:font-bold text-[8px] sm:text-[10px] lg:text-sm' style={{color:"#3C4242"}}>${product.discount_price==0?product.actual_price:product.discount_price}</p>
                                       </div>
                                     </div>
                                     
@@ -206,4 +206,4 @@ const routeParams = useParams();
   )
 }
 
-export default Page
+export default page
