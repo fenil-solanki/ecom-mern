@@ -5,9 +5,11 @@ import axios from "axios"
 import {FcGoogle} from 'react-icons/fc'
 import {IoLogoTwitter} from 'react-icons/io'
 import { useUserContext } from '@/context/UserContext'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 const Page = () => {
   const {userCart,handleLogin,userInfo,userEmail}=useUserContext()
+  const router = useRouter()
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
     const handleChange=(e:any)=>{
@@ -70,6 +72,7 @@ const Page = () => {
             setpassword("")
           
             handleLogin(userData)
+          router.push('/products')
         }catch(e){
             alert("Sorry, something went wrong.")
         }
