@@ -54,28 +54,9 @@ const Page = () => {
       console.log("Product details :", productDetail)
       console.log(ArrayOfImageUrl)
       const dataImage = [...ArrayOfImageUrl]
-      const dataImage2=[];
       let arr: any = []
-      console.log(dataImage)
-
-      dataImage.map(async(value,i)=>{
-       if (value) {
-          try {
-            const compressedImageFile = await new Compressor(imageFile, {
-              quality: 0.6,
-              maxWidth: 800,
-              maxHeight: 800,
-            });
-
-            const compressedImageDataURL = URL.createObjectURL(compressedImageFile);
-            dataImage2=[...dataImage2,compressedImageDataURL]
-          } catch (error) {
-            console.error('Image compression failed:', error);
-          }
-        }
-      })
       
-      dataImage2.map(async (val, i) => {
+      dataImage.map(async (val, i) => {
         var base64Image: any = "";
         const filereader = new FileReader();
         filereader.onload = (file) => {
