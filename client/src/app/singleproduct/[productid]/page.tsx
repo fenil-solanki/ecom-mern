@@ -164,7 +164,7 @@ const Page = () => {
                   <PiShoppingCartSimpleBold className='inline mr-2' style={{color:"fff"}} size={24}></PiShoppingCartSimpleBold>
                  <span style={{color:"white"}}>Add to cart</span>
                   </button>
-                <button className='font-bold  py-2 text-lg border border-[#3C4242] rounded-md'>{return singleProduct.discount_price!==0 ? singleProduct.disocunt_price:singleProduct.actual_price}</button>
+                <button className='font-bold  py-2 text-lg border border-[#3C4242] rounded-md'>${singleProduct.discount_price==0?singleProduct.actual_price:singleProduct.discount_price}</button>
               </div>
     
               <hr className='border border-[#BEBCBD] my-12'/>
