@@ -5,7 +5,7 @@ const Page = () => {
 
   const [productDetail, setProductDetail] = useState<any>(
     {
-      id: "",
+      id: Date.now().toString(),
       name: "",
       company: "",
       category: "",
@@ -89,9 +89,6 @@ const handleUpload = async (e: any) => {
 
   e.preventDefault()
 
-  console.log(Date.now().toString())
-  const dateData=Date.now().toString();
-  setProductDetail({...productDetail,id: dateData})
   
   try {
     const res = await axios.post("https://ecom-mern-server.vercel.app/postproduct", productDetail)
