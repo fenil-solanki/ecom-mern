@@ -141,19 +141,42 @@ table tr th{
 	text-align: center;
 }
 
+th{
+	font-size: 18px;
+	font-weight: 400;
+}
+
 table tr td{
-	padding: 50px 0px;
+	padding: 30px 0px;
 }
 
 
 
-@media only screen and (min-width: 1024px) {
+
+
+  @media only screen and (min-width: 640px) {
+	/* For desktop: */
+	th{
+		font-weight: 500;
+	}
+  }
+
+  @media only screen and (min-width: 768px) {
+	/* For desktop: */
+	table tr td{
+		padding: 50px 0px;
+	}
+  }
+
+  @media only screen and (min-width: 1024px) {
 	/* For desktop: */
 	table tr th{
-		padding: 16px 0px;
+		padding: 12px 0px;
 		text-align: center;
 	}
   }
+
+  
 
 /* .circle {
 	float: right;
