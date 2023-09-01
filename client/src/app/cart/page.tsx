@@ -11,9 +11,9 @@ const Page = () => {
     const {isLoggedIn}=useUserContext()
     console.log(userCart)
 
-   
+   const sessionData:any=sessionStorage.getItem("user")
 
-  if(sessionStorage.getItem("user")?.length===0 || sessionStorage.getItem("user")===null || sessionStorage.getItem("user")===""){
+  if(sessionData.length===0 || sessionData===null || sessionData===""){
     return(
       <>
      <div>Please login to see your cart...</div>
@@ -22,7 +22,7 @@ const Page = () => {
   }
    
 
-  if(userCart.length==0 && (sessionStorage.getItem("user")?.length===0 || sessionStorage.getItem("user")===null || sessionStorage.getItem("user")==="")){
+  if(userCart.length==0 && (sessionData.length===0 || sessionData===null || sessionData==="")){
     return(
       <>
         <div>No items in cart</div>
