@@ -5,7 +5,7 @@ import {FcGoogle} from 'react-icons/fc'
 import {IoLogoTwitter} from 'react-icons/io'
 import Link from 'next/link'
 
-const page = () => {
+const Page = () => {
   const [name, setname] = useState("")
   const [surname, setsurname] = useState("")
   const [email, setemail] = useState("")
@@ -152,4 +152,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
