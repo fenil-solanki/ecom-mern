@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { useCartContext } from '@/context/CartContext'
 import React, { useEffect, useState } from 'react'
 import Navbar from '../component/Navbar';
@@ -13,35 +13,35 @@ const Page = () => {
 
    
 
-  // if(sessionStorage.getItem("user")?.length===0 || sessionStorage.getItem("user")===null || sessionStorage.getItem("user")===""){
-  //   return(
-  //     <>
-  //    <div>Please login to see your cart...</div>
-  //     </>
-  //   )
-  // }
+  if(sessionStorage.getItem("user")?.length===0 || sessionStorage.getItem("user")===null || sessionStorage.getItem("user")===""){
+    return(
+      <>
+     <div>Please login to see your cart...</div>
+      </>
+    )
+  }
    
 
-  // if(userCart.length==0 && (sessionStorage.getItem("user")?.length===0 || sessionStorage.getItem("user")===null || sessionStorage.getItem("user")==="")){
-  //   return(
-  //     <>
-  //       <div>No items in cart</div>
-  //     </> )
-  // }
+  if(userCart.length==0 && (sessionStorage.getItem("user")?.length===0 || sessionStorage.getItem("user")===null || sessionStorage.getItem("user")==="")){
+    return(
+      <>
+        <div>No items in cart</div>
+      </> )
+  }
 
 
   return (
-    <div>
+    <div className=''>
         <hr></hr>
         <table className='w-full'>
           <thead className='bg-[#3C4242]'>
             <tr style={{color:"white"}}>
-              <th>PRODUCT DETAILS</th>
-              <th>PRICE</th>
-              <th>QUANTITTY</th>
-              <th>SHIPPING</th>
-              <th>SUBTOTAL</th>
-              <th>ACTION</th>
+              <th className='text-xs sm:text-lg'>PRODUCT DETAILS</th>
+              <th className='hidden text-xs sm:text-lg md:table-cell'>PRICE</th>
+              <th className='text-xs sm:text-lg'>QUANTITTY</th>
+              <th className='hidden text-xs sm:text-lg md:table-cell'>SHIPPING</th>
+              <th className='hidden text-xs sm:text-lg md:table-cell'>SUBTOTAL</th>
+              <th className='text-xs sm:text-lg'>ACTION</th>
             </tr>
           </thead>
           <tbody className='container mx-auto py-3'>
@@ -53,10 +53,10 @@ const Page = () => {
           </tbody>
         </table>
         
-            <section className='bg-[#F6F6F6]'>
-              <div className='container mx-auto py-11'>
-                <div className='flex'>
-                <div className='basis-1/2'>
+        <section className='bg-[#F6F6F6]'>
+              <div className='container mx-auto py-7 lg:py-11'>
+                <div className='flex justify-end sm:justify-normal'>
+                <div className='basis-0/2 sm:basis-1/2'>
                     <div className="hidden">
                   <p className='font-semibold'>Discount Codes</p>
                   <p>Enter your coupon code if you have one</p>
@@ -67,34 +67,34 @@ const Page = () => {
                   <button className='py-3 px-12 rounded-md border border-[#BEBCBD] decoration-[#3C4242] bg-[#fff]'><Link href="/products">Continue Shopping</Link></button>
                 </div>
                     </div>
-                <div className='basis-1/2'>
-                  <div className=''>
+                <div className='basis-2/2 sm:basis-1/2'>
+                  <div className='px-5 sm:px-0'>
                     <div>
 
                     <table className='mx-auto'>
                       <tr>
-                        <td className='p-2'>Sub Total </td>
-                        <td className='p-2'>$513.00</td>
+                        <td className='p-1 sm:p-1.5 md:p-2'>Sub Total </td>
+                        <td className='p-1 sm:p-1.5 md:p-2'>$513.00</td>
 
                       </tr>
 
                       <tr>
-                        <td className='p-2'>Shipping </td>
-                        <td className='p-2'>$0.00</td>
+                        <td className='p-1 sm:p-1.5 md:p-2'>Shipping </td>
+                        <td className='p-1 sm:p-1.5 md:p-2'>$0.00</td>
 
                       </tr>
 
                       <tr>
-                        <td className='py-4 px-2'>Grand Total </td>
-                        <td className='py-4 px-2'>$518.00</td>
+                        <td className='py-2.5 px-1 sm:py-3 sm:px-2 md:py-4'>Grand Total </td>
+                        <td className='py-2.5 px-1 sm:py-3 sm:px-2 md:py-4'>$518.00</td>
 
                       </tr>
 
                     </table>
-                  <hr className='border-b-1 border-[#BEBCBD] w-[50%] mx-auto mt-3 mb-4'/>
+                  <hr className='border-b-1 border-[#BEBCBD] w-[80%] mx-auto mt-3 mb-4 sm:w-[50%]'/>
                     </div>
                   <div className='text-center'>
-                  <button className='bg-[#8A33FD] rounded-md p-3 mx-auto' style={{color:"white"}}>Proceed To Checkout</button>
+                  <button className='bg-[#8A33FD] rounded-md  mx-auto font-medium p-2 text-base sm:p-2.5 sm:text-lg sm:font-semibold md:text-xl md:p-3' style={{color:"white"}}>Proceed To Checkout</button>
 
                   </div>
                   
