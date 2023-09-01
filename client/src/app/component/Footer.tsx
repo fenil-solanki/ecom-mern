@@ -3,7 +3,7 @@ import {BiLogoFacebook, BiLogoTwitter,BiLogoInstagram,BiLogoLinkedin} from 'reac
 
 const Footer = () => {
   return (
-    <footer className=''>
+    <footer className='top-full sticky'>
     <div className='p-8 bg-[#3C4242]' style={{color:"white"}}>
         
             <div className='px-24 py-8 container mx-auto'>
