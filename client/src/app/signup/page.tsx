@@ -5,7 +5,7 @@ import {FcGoogle} from 'react-icons/fc'
 import {IoLogoTwitter} from 'react-icons/io'
 import Link from 'next/link'
 
-const Page = () => {
+const page = () => {
   const [name, setname] = useState("")
   const [surname, setsurname] = useState("")
   const [email, setemail] = useState("")
@@ -82,7 +82,7 @@ const Page = () => {
       try{
         const userData={name,email,password}
         console.log(userData)
-        const res:any = await axios.post("https://ecom-mern-server.vercel.app/adduser", userData)
+        const res:any = await axios.post("http://localhost:5000/adduser", userData)
         const data=await res.data
         console.log(res)
         console.log(data)
@@ -98,7 +98,8 @@ const Page = () => {
   return (
     <>
    <div className='md:flex md:flex-row'>
-     <div className='basis-0/2 md:basis-1/2 bg-betterfashion2 bg-cover bg-center bg-no-repeat'>
+     <div className='basis-0/2 hidden md:block md:basis-1/2'>
+      <img src="betterfashion-2.png" className='w-full h-full' alt="" />
      </div>
    <div className='basis-2/2 md:basis-1/2 px-10 sm:px-20 md:px-4 py-4'>
        <form className="login md:px-8 lg:px-16 xl:px-24" onSubmit={submitData}>
@@ -151,4 +152,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default page
