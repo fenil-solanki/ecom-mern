@@ -26,7 +26,7 @@ const SingleProductImages = ({images}: any) => {
                         
                     </div>
                     <div className='col-span-12 h-full sm:col-span-9'>
-                        <img src={selectedImage} className='h-full mx-auto rounded-lg sm:h-[785px] sm:w-[520px]'></img>
+                        <img src={selectedImage} className='h-auto w-full mx-auto rounded-lg'></img>
                     </div>
                 </div>
             </div>
