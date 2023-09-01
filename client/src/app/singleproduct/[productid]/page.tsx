@@ -159,12 +159,12 @@ const Page = () => {
     </div>
             </div>
     
-              <div className='w-[100%] xl:w-[80%] 2xl:w-[50%] grid grid-cols-2 gap-2'>
+              <div className='w-[100%] xl:w-[80%] 2xl:w-[50%] mt-10 grid grid-cols-1 gap-2 md:mt-0 md:grid-cols-2'>
                 <button className='font-semibold bg-[#8A33FD] py-3 rounded-md' style={{color:"fff"}} onClick={handleCart}>
                   <PiShoppingCartSimpleBold className='inline mr-2' style={{color:"fff"}} size={24}></PiShoppingCartSimpleBold>
                  <span style={{color:"white"}} className='text-lg'>Add to cart</span>
                   </button>
-                <button className='font-bold   py-2 text-lg border border-[#3C4242] rounded-md'>$63.00</button>
+                <button className='font-semibold  py-2 text-lg border border-[#3C4242] rounded-md'>$63.00</button>
               </div>
     
               <hr className='border border-[#BEBCBD] my-10 lg:my-12'/>
