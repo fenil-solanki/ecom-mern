@@ -14,7 +14,7 @@ const SingleProductImages = ({images}: any) => {
     if(images !==undefined && images.length !==0 && images[0]){
         return (
             <div>
-                <div className='grid grid-cols-12 py-12 px-12 sm:px-0'>
+                <div className='grid grid-cols-12 pt-8 pb-4 px-12 sm:px-0 sm:pt-12 sm:pb-12'>
                     <div className='hidden sm:block sm:col-span-3'>
                         <div className=''>
                         {
