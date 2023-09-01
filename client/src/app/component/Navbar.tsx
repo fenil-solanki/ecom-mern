@@ -1,8 +1,7 @@
 "use client"
 
 import Link from 'next/link'
-import React from 'react'
-import {useState} from 'react'
+import React,{useState} from 'react'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {AiOutlineHeart} from 'react-icons/ai'
 import {BsPersonCircle} from 'react-icons/bs'
@@ -31,7 +30,7 @@ const Navbar = () => {
         <AiOutlineMenu className='inline' onClick={()=>setopenMenu(true)}></AiOutlineMenu>
       </div>
 
-      <div className='block fixed top-0 right-0 bg-[#fff] py-12 px-24  w-[280px] h-full duration-500 z-20 lg:hidden' style={{transform: openMenu===true?`translate(0px, 0px)`:`translate(560px, 0px)`}}>
+      <div className='block fixed top-0 right-0 bg-[#fff] pt-4 pb-12 px-16  w-[280px] h-full duration-500 z-20 lg:hidden' style={{transform: openMenu===true?`translate(0px, 0px)`:`translate(560px, 0px)`}}>
         <ul className=''>
               <li className='font-bold my-6'><Link href="/profile">Profile</Link></li>
               <li className='font-medium my-6' style={{color:"#807D7E"}}><Link href="/signup">Sign up</Link></li>
