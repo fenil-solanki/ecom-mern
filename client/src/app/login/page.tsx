@@ -6,7 +6,7 @@ import {FcGoogle} from 'react-icons/fc'
 import {IoLogoTwitter} from 'react-icons/io'
 import { useUserContext } from '@/context/UserContext'
 import Link from 'next/link'
-const page = () => {
+const Page = () => {
   const {userCart,handleLogin,userInfo,userEmail}=useUserContext()
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
@@ -117,4 +117,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
