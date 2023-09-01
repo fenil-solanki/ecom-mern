@@ -14,8 +14,8 @@ const SingleProductImages = ({images}: any) => {
     if(images !==undefined && images.length !==0 && images[0]){
         return (
             <div>
-                <div className='grid grid-cols-12 py-12'>
-                    <div className='col-span-3'>
+                <div className='grid grid-cols-12 py-12 px-12 sm:px-0'>
+                    <div className='hidden sm:block sm:col-span-3'>
                         <div className=''>
                         {
                            images.map((curElem:any,index:number)=>{
@@ -25,8 +25,8 @@ const SingleProductImages = ({images}: any) => {
                         </div>
                         
                     </div>
-                    <div className='col-span-9 h-full'>
-                        <img src={selectedImage} className='h-[785px] w-[520px] mx-auto rounded-lg'></img>
+                    <div className='col-span-12 h-full sm:col-span-9'>
+                        <img src={selectedImage} className='h-full mx-auto rounded-lg sm:h-[785px] sm:w-[520px]'></img>
                     </div>
                 </div>
             </div>
