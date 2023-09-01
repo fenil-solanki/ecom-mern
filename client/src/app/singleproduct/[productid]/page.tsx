@@ -94,10 +94,10 @@ const Page = () => {
 
         <div>
           <section className='grid grid-cols-12'>
-            <div className='col-span-6'>
+            <div className='col-span-12 sm:col-span-6'>
               <SingleProductImages images={singleProduct.image}></SingleProductImages>
             </div>
-            <div className='col-span-6 pt-14 pb-12 px-10'>
+            <div className='col-span-12 pt-14 pb-12 px-2 sm:px-10 sm:col-span-6'>
               <p style={{color:"#807D7E"}} className='text-base lg:text-lg'>Shop{'>'}Women{'>'}Top</p>
             <h3 className='font-medium text-2xl my-3.5 lg:text-3xl lg:font-semibold lg:my-4'>{singleProduct.name} {singleProduct.company}</h3>
             <div>
