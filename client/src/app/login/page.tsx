@@ -5,11 +5,9 @@ import axios from "axios"
 import {FcGoogle} from 'react-icons/fc'
 import {IoLogoTwitter} from 'react-icons/io'
 import { useUserContext } from '@/context/UserContext'
-import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-const Page = () => {
+const page = () => {
   const {userCart,handleLogin,userInfo,userEmail}=useUserContext()
-  const router = useRouter()
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
     const handleChange=(e:any)=>{
@@ -64,7 +62,7 @@ const Page = () => {
                 password
             }
             console.log("User data from fornt end : ",userdata)
-            const res = await axios.get("https://ecom-mern-server.vercel.app/finduser", {params: userdata})
+            const res = await axios.get("http://localhost:5000/finduser", {params: userdata})
             const userData=await res.data;
             console.log(userData)
 
@@ -72,7 +70,6 @@ const Page = () => {
             setpassword("")
           
             handleLogin(userData)
-          router.push('/products')
         }catch(e){
             alert("Sorry, something went wrong.")
         }
@@ -82,7 +79,8 @@ const Page = () => {
     return (
       <>
      <div className='md:flex md:flex-row'>
-       <div className=' bg-signinimage basis-0/2 md:basis-1/2  bg-cover bg-center bg-no-repeat'>
+       <div className='basis-0/2 hidden md:block md:basis-1/2'>
+        <img src="sign-in-image.png" alt="sorry" className='w-full h-auto'/>
        </div>
      <div className='basis-2/2 md:basis-1/2 px-10 sm:px-20 md:px-4 py-4'>
          <form className="login md:px-8 lg:px-16 xl:px-24" onSubmit={handleSubmit}>
@@ -119,4 +117,4 @@ const Page = () => {
     )
 }
 
-export default Page
+export default page
