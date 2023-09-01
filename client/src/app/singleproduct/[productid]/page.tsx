@@ -14,7 +14,7 @@ import {TiTick} from 'react-icons/ti'
 import { FaMinus, FaPlus } from 'react-icons/fa'
 import { useUserContext } from '@/context/UserContext'
 import RatingStar from '@/app/component/RatingStar'
-const page = () => {
+const Page = () => {
     const pathname=usePathname()
     const url=pathname
     const substringToRemove = '/singleproduct/';
@@ -205,4 +205,4 @@ const page = () => {
   
 }
 
-export default page
+export default Page
