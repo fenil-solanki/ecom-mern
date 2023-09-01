@@ -9,7 +9,7 @@ import { useFilterContext } from '@/context/FilterContext'
 import DressTypes from '../component/DressTypes'
 import Companies from '../component/Companies'
 // import Products from '../component/Products'
-const Page = () => {
+const page = () => {
   const {apiloading}=useAppContext()
   const {products,filterProducts,updateFilterValue,uniqueColors,unique_types,uniqueSizes,uniqueCompanies,clearFilter,minimum_price,maximum_price,uniqueCategories,filters}=useFilterContext()
   const [color, setcolor] = useState<any>([])
@@ -180,14 +180,14 @@ const routeParams = useParams();
                                 <div className='mx-auto my-6 md:my-4 2xl:my-8'>
                                     <img src={product.image} className='w-[118px] h-[156px] sm:w-[169px] sm:h-[222px] md:w-[211px] md:h-[277px] lg:w-[282px] lg:h-[370px] rounded-lg' />
                                     <div className='grid grid-cols-3 lg:grid-cols-2 mt-4'>
-                                      <div className='col-span-2 lg:col-span-1'>
+                                      <div className='col-span-3 sm:col-span-2 lg:col-span-1'>
                                       <p style={{color:"#3C4242"}} className='text-[8px] font-medium sm:text-xs lg:text-sm  2xl:font-semibold 2xl:text-base'>{product.name}</p>
                                       {
                                         product.comapny!=="" && product.company.length!==0?<p style={{color:"#807D7E"}} className='text-[8px] font-normal sm:text-[10px] lg:text-xs  2xl:font-medium 2xl:text-sm'>{product.company}</p>:null
                                       }
                                     
                                       </div>
-                                      <div className='bg-[#F6F6F6] py-1 mx-auto lg:py-2'>
+                                      <div className='py-1 mx-auto lg:py-2'>
                                         <p className='font-semibold sm:font-bold text-[8px] sm:text-[10px] lg:text-sm' style={{color:"#3C4242"}}>${product.discount_price==0?product.actual_price:product.discount_price}</p>
                                       </div>
                                     </div>
@@ -206,4 +206,4 @@ const routeParams = useParams();
   )
 }
 
-export default Page
+export default page
