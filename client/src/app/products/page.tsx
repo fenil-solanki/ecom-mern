@@ -9,7 +9,7 @@ import { useFilterContext } from '@/context/FilterContext'
 import DressTypes from '../component/DressTypes'
 import Companies from '../component/Companies'
 // import Products from '../component/Products'
-const page = () => {
+const Page = () => {
   const {apiloading}=useAppContext()
   const {products,filterProducts,updateFilterValue,uniqueColors,unique_types,uniqueSizes,uniqueCompanies,clearFilter,minimum_price,maximum_price,uniqueCategories,filters}=useFilterContext()
   const [color, setcolor] = useState<any>([])
@@ -206,4 +206,4 @@ const routeParams = useParams();
   )
 }
 
-export default page
+export default Page
