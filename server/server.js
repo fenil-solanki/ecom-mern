@@ -22,7 +22,7 @@ var bodyParser = require('body-parser');
 
 // app.set("view engine","ejs")
 // app.set('views', __dirname + '/views')
-app.use(bodyParser.json());
+
 
 /** RULES OF OUR API */
 // app.use((req, res, next):any => {
@@ -45,6 +45,7 @@ let CartObj = require("./source/models/Cart.js")
 let ProductObj=require("./source/models/Product.js")
 let ImageModel=require("./source/models/Image.js")
 
+app.use(bodyParser.json());
 app.use(express.json({limit:"10mb"}));
 app.use(bodyParser.urlencoded({
     extended: true,
