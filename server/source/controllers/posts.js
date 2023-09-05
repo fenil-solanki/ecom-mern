@@ -140,7 +140,7 @@ const postProduct = async (req, res, next) => {
 
 const getProducts=async (req, res, next) => {
     
-    var products=await ProductObj.find().select({ "id":1,"name":1,"company":1,"category":1,"type":1,"style":1,"color":1,"image":1,"actual_price":1,"sizes":1,"new":1,"discount_price":1,"_id":0});
+    var products=await ProductObj.find().select({ "id":1,"name":1,"company":1,"category":1,"type":1,"style":1,"color":1,"image":1,"actual_price":1,"discount_rate":1,"sizes":1,"new":1,"discount_price":1,"_id":0});
 
 
     const jsonData=JSON.stringify(products)
