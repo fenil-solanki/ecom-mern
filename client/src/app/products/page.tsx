@@ -34,8 +34,8 @@ const routeParams = useParams();
     <>
     <section className='container mx-auto'>
 
-      <div className='flex flex-row'>
-        <div className='basis-3/12'>
+      <div className='grid grid-cols-12'>
+        <div className='hidden col-span-3 sm:block'>
           <section className='px-2 sm:px-5'>
             <div className=''>
               <div className='mt-8 mb-2 sm:mb-4 lg:mb-12 grid grid-cols-2'>
@@ -150,7 +150,7 @@ const routeParams = useParams();
 
           </section>
         </div>
-        <div className='basis-9/12'>
+        <div className='col-span-12 sm:col-span-9'>
                 <div className='grid grid-cols-1 mt-8 mb-4 sm:mb-8 sm:grid-cols-2  pr-4 2xl:pr-14'>
                     <div className=''>
                       {
@@ -172,23 +172,23 @@ const routeParams = useParams();
                         <span className='inline text-base md:text-lg lg:text-xl' style={{color:"#3F4646"}}>Recommended</span>
                     </div>
                 </div>
-                <div className='grid grid-cols-3 gap-2 pb-8 sm:px-2 lg:px-0 lg:gap-6 2xl:gap-1'>
+                <div className='grid grid-cols-2 gap-2 pb-8 sm:grid-cols-3 sm:px-2 lg:px-0 lg:gap-6 2xl:gap-1'>
                     {
                         filterProducts && filterProducts.length && filterProducts.map((product:any)=>{
                             return(
                               <Link href={`/singleproduct/${product.id}`} key={product.id}>
                                 <div className='mx-auto my-6 md:my-4 2xl:my-8'>
-                                    <img src={product.image} className='w-[118px] h-[156px] sm:w-[169px] sm:h-[222px] md:w-[211px] md:h-[277px] lg:w-[282px] lg:h-[370px] rounded-lg' />
+                                    <img src={product.image} className='w-[169px] h-[222px] md:w-[211px] md:h-[277px] lg:w-[282px] lg:h-[370px] rounded-lg' />
                                     <div className='grid grid-cols-3 lg:grid-cols-2 mt-4'>
                                       <div className='col-span-3 sm:col-span-2 lg:col-span-1'>
-                                      <p style={{color:"#3C4242"}} className='text-[8px] font-medium sm:text-xs lg:text-sm  2xl:font-semibold 2xl:text-base'>{product.name}</p>
+                                      <p style={{color:"#3C4242"}} className='text-[12px] font-medium sm:text-xs lg:text-sm  2xl:font-semibold 2xl:text-base'>{product.name}</p>
                                       {
-                                        product.comapny!=="" && product.company.length!==0?<p style={{color:"#807D7E"}} className='text-[8px] font-normal sm:text-[10px] lg:text-xs  2xl:font-medium 2xl:text-sm'>{product.company}</p>:null
+                                        product.comapny!=="" && product.company.length!==0?<p style={{color:"#807D7E"}} className='text-[12px] font-normal sm:text-[10px] lg:text-xs  2xl:font-medium 2xl:text-sm'>{product.company}</p>:null
                                       }
                                     
                                       </div>
-                                      <div className='py-1 mx-auto lg:py-2'>
-                                        <p className='font-semibold sm:font-bold text-[8px] sm:text-[10px] lg:text-sm' style={{color:"#3C4242"}}>${product.discount_price==0?product.actual_price:product.discount_price}</p>
+                                      <div className='py-1 sm:mx-auto lg:py-2'>
+                                        <p className='font-semibold sm:font-bold text-[12px] sm:text-[10px] lg:text-sm' style={{color:"#3C4242"}}>${product.discount_price==0?product.actual_price:product.discount_price}</p>
                                       </div>
                                     </div>
                                     
