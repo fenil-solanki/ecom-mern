@@ -183,7 +183,7 @@ const Page = () => {
                   return (
                     <Link href={`/singleproduct/${product.id}`} key={product.id}>
                       <div className='mx-auto px-2 sm:mx-0 my-2 md:my-4 2xl:my-8'>
-                        <img src={product.image} className='mx-auto w-full h-[222px] md:h-[277px] lg:h-[370px] rounded-lg' />
+                        <img src={product.image} className='mx-auto w-full h-[235px] md:h-[277px] lg:h-[370px] rounded-lg' />
                         <div className='mt-4'>
                           <div className=''>
                             <p style={{ color: "#3C4242" }} className='text-[12px] font-medium sm:text-xs lg:text-sm  2xl:font-semibold 2xl:text-base'>{product.name}</p>
@@ -209,11 +209,11 @@ const Page = () => {
 
                           <div className='block sm:hidden'>
 
-                            <RatingStar stars={product.stars} mar={0.25}></RatingStar>
+                            <RatingStar stars={product.stars} mar={0.25} size={12}></RatingStar>
 
 
                             <div className='inline text-sm lg:text-base'>
-                              <span style={{ color: "#807D7E" }}>({product.reviews})</span>
+                              <span style={{ color: "#807D7E" }} className='text-[12px]'>({product.reviews})</span>
                             </div>
 
                           </div>
