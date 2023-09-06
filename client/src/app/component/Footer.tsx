@@ -14,7 +14,7 @@ const Footer = () => {
                             <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>Contact Us</li>
                             <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>Track Order</li>
                             <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>Returns & Refunds</li>
-                            <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>FAQ's</li>
+                            {/* <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>FAQ's</li> */}
                             <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>Career</li>
                         </ul>
                     </div>
@@ -25,7 +25,7 @@ const Footer = () => {
                         <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>Contact Us</li>
                             <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>Track Order</li>
                             <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>Returns & Refunds</li>
-                            <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>FAQ's</li>
+                            {/* <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>FAQ's</li> */}
                             <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>Career</li>
                         </ul>
 
@@ -35,7 +35,7 @@ const Footer = () => {
                         <ul className='py-3'>
                         <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>Track Order</li>
                             <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>Returns & Refunds</li>
-                            <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>FAQ's</li>
+                            {/* <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>FAQ's</li> */}
                             <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>Career</li>
                             </ul>
                     </div>
@@ -43,8 +43,8 @@ const Footer = () => {
                     <h3 className='font-bold text-3xl'>Location</h3>
                         <ul className='py-3'>
                         <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>support@euphoria.in</li>
-                            <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>Eklingpura Chouraha, Ahmedabad Main Road</li>
-                            <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>(NH 8- Near Mahadev Hotel) Udaipur, India- 313002</li>
+                            {/* <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>Eklingpura Chouraha, Ahmedabad Main Road</li> */}
+                            {/* <li className="my-5 font-medium text-lg" style={{color:"#F6F6F6"}}>(NH 8- Near Mahadev Hotel) Udaipur, India- 313002</li> */}
                             </ul>
                     </div>
                 </div>
