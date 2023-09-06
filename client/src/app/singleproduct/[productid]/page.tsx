@@ -102,7 +102,7 @@ const Page = () => {
             <h3 className='font-medium text-2xl my-3.5 lg:text-3xl lg:font-semibold lg:my-4'>{singleProduct.name} {singleProduct.company}</h3>
             <div>
                
-              <RatingStar stars={singleProduct.stars} mar={2}></RatingStar>
+              <RatingStar stars={singleProduct.stars} mar={2} size={22}></RatingStar>
 
               
               <span style={{color:"#807D7E"}} className='text-sm lg:text-base'>{singleProduct.stars}</span>
