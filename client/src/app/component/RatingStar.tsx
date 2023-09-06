@@ -1,7 +1,7 @@
 import React from 'react'
 import { BsStarFill,BsStarHalf, BsStar } from 'react-icons/bs'
 
-const RatingStar = ({stars,mar}:any) => {
+const RatingStar = ({stars,mar,size}:any) => {
     console.log("Star : ",stars)
     console.log(mar)
     const ratingStar = Array.from({ length: 5 }, (elem, index) => {
@@ -10,11 +10,11 @@ const RatingStar = ({stars,mar}:any) => {
         return (
           <span key={index}>
             {stars >= index + 1 ? (
-              <BsStarFill   className={`inline mx-${mar}`} style={{color:"#EDD146"}}/>
+              <BsStarFill   className={`inline mx-${mar}`} size={size} style={{color:"#EDD146"}}/>
             ) : stars >= number ? (
-              <BsStarHalf  className={`inline mx-${mar}`} style={{color:"#EDD146"}}/>
+              <BsStarHalf  className={`inline mx-${mar}`} size={size} style={{color:"#EDD146"}}/>
             ) : (
-              <BsStar  className={`inline mx-${mar}`}  style={{color:"#EDD146"}}/>
+              <BsStar  className={`inline mx-${mar}`} size={size}  style={{color:"#EDD146"}}/>
             )}
           </span>
         );
