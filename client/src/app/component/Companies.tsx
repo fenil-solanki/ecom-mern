@@ -8,11 +8,11 @@ const Companies = ({company}:any) => {
   return (
 
 
-<div className='w-full  grid grid-cols-4 py-1 sm:py-2 '>
-<button name="company" value={company} className="col-span-3 font-semibold text-left text-xs sm:text-sm md:text-base lg:text-xl" style={{color:"#8A8989"}} onClick={updateFilterValue}>
+<div className='w-full   py-1 sm:py-2 '>
+  <input type="checkbox" value={company} name="company" id={company} className='h-[15px] w-[15px] mx-3 sm:ml-0 sm:mr-1 sm:h-[12px] sm:w-[12px] md:ml-1 md:mr-1.5 lg:mx-3  md:h-[15px] md:w-[15px]'  onClick={updateFilterValue} />
+<button className="font-semibold text-left text-xs sm:text-xs md:text-base lg:text-xl " style={{color:"#8A8989"}}>
 {capitalcompany}
 </button>
-<MdOutlineArrowForwardIos className='inline text-right font-semibold text-xs sm:text-sm md:text-base  lg:text-xl' style={{color:"#8A8989"}} ></MdOutlineArrowForwardIos>
 
 </div>
   )
