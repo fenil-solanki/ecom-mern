@@ -2,8 +2,6 @@ import React from 'react'
 import { BsStarFill,BsStarHalf, BsStar } from 'react-icons/bs'
 
 const RatingStar = ({stars,mar,size}:any) => {
-    console.log("Star : ",stars)
-    console.log(mar)
     const ratingStar = Array.from({ length: 5 }, (elem, index) => {
         let number = index + 0.5;
         // debugger;
