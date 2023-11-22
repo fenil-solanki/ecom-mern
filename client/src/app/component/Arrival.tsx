@@ -3,10 +3,10 @@ import React from 'react'
 const Arrival = () => {
   return (
     <section className='container mx-auto my-6'>
-        <div className="pr-2.5 sm:pr-0">
+        <div>
           <div className='border-4 mr-6 border-[#8A33FD] rounded-lg inline mr-4 sm:mr-8 lg:mr-12'></div>
           <div className=' inline'>
-          <h2 className='font-medium text-xl sm:text-3xl inline md:font-semibold md:text-4xl ' style={{color:"#3C4242"}}>New Arrival</h2>
+          <h2 className='font-medium text-3xl inline md:font-semibold md:text-4xl ' style={{color:"#3C4242"}}>New Arrival</h2>
 
           </div>
         </div>
